@@ -1,0 +1,5 @@
+HTML Elements Categories
+1. Block Elements
+2. Inline Elements
+
+
