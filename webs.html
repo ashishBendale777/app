@@ -22,12 +22,55 @@
             color: cyan;
         }
 
-        section {
+        /* section {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100vw;
             height: 100vh;
+        } */
+
+        .about-section {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            /* background-color: red; */
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 50%;
+        }
+
+        .image-container img {
+            height: 450px;
+            width: 450px;
+            border-radius: 50%;
+            border: 5px solid blue;
+            /* border-color: blue;
+            border-style: solid;
+            border-width: 10px; */
+        }
+
+        .info-container {
+            height: 100%;
+            width: 50%;
+        }
+
+        .info-container h1,
+        h2 {
+            text-align: center;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            height: 30px;
+            width: 100px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -47,8 +90,50 @@
         <h1>HOME</h1>
     </section>
 
-    <section id="about">
-        <h1>ABOUT</h1>
+    <section id="about" class="about-section">
+        <!-- <h1>ABOUT Me</h1> -->
+        <div class="image-container">
+            <img src="cont.jpg" alt="">
+        </div>
+        <div class="info-container">
+            <h1>About Me</h1>
+            <h2>Web Developer</h2>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio doloremque rerum explicabo quas nisi
+                ipsum. Repellendus mollitia voluptates quos? Sequi, quia! Repellendus laudantium recusandae omnis
+                officiis quod illum quas voluptatibus.</article>
+
+            <div style="display: flex; margin-top: 30px; gap: 30px;">
+                <div>
+                    <dl>
+                        <dt>Name</dt>
+                        <dd>ASHISH BENDALE</dd>
+
+                        <dt>Degree</dt>
+                        <dd>MCA</dd>
+
+                        <dt>Mobile No</dt>
+                        <dd>8888813277</dd>
+                    </dl>
+                </div>
+
+                <div>
+                    <div>
+                        <span>Email</span>
+                        <span>ashishbe@gmail.com</span>
+                    </div>
+                    <div>
+                        <span>Address</span>
+                        <address>BSL</address>
+                    </div>
+                </div>
+            </div>
+
+            <button>HIRE ME</button>
+
+
+
+
+        </div>
     </section>
 
     <section id="contact">
