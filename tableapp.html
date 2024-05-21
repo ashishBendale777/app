@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 3px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: red;
+        }
+
+        caption {
+            caption-side: top;
+            font-size: 1.5em;
+            margin: 10px;
+        }
+
+        .highlight {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Student Data Table</caption>
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+                <th>Major</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="highlight">
+                <td>1001</td>
+                <td>Jane Doe</td>
+                <td>20</td>
+                <td>A</td>
+                <td>Computer Science</td>
+            </tr>
+            <tr>
+                <td>1002</td>
+                <td>John Smith</td>
+                <td>22</td>
+                <td>B</td>
+                <td>Mathematics</td>
+            </tr>
+            <tr class="highlight">
+                <td>1003</td>
+                <td>Emily Johnson</td>
+                <td>21</td>
+                <td>A</td>
+                <td>Physics</td>
+            </tr>
+            <tr>
+                <td rowspan="2">1004</td>
+                <td>Michael Brown</td>
+                <td>23</td>
+                <td>C</td>
+                <td>Chemistry</td>
+            </tr>
+            <tr class="highlight">
+                <td>1005</td>
+                <td>Sarah Davis</td>
+                <td>19</td>
+                <td>B</td>
+                <td>Biology</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Students: 5</td>
+                <td colspan="2">Total</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
