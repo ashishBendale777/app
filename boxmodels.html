@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model with Different Box-Sizing</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+
+    <style>
+        .main-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 100px;
+            /* padding: 40px; */
+            padding-left: 30px;
+            border: 5px solid #333;
+            margin: 0px;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 100px;
+            padding: 60px;
+            /* border: 10px double #333; */
+            border-width: 10px;
+            border-style: solid;
+            border-color: aqua;
+            margin-top: 10px;
+            /* border-radius: 20px; */
+            border-bottom-right-radius: 30px;
+            border-top-left-radius: 50px;
+            box-sizing: content-box;
+            background-color: #f4f4f4;
+            transition: 0.8s;
+        }
+
+        .box2:hover {
+            border-bottom-left-radius: 60px;
+            border-top-right-radius: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+    </div>
+
+</body>
+
+</html>
