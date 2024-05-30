@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .hitext::after {
+            content: " Ashish";
+            color: red;
+            font-size: x-large;
+            font-style: italic;
+        }
+
+        .hitext::before {
+            content: "Welcome, ";
+            color: blue;
+            font-style: italic;
+        }
+
+        .datap::first-letter {
+            color: red;
+            font-size: x-large;
+        }
+
+        .datap::first-line {
+            color: blue;
+            font-style: italic;
+        }
+
+        .datap::selection {
+            background-color: red;
+            color: blue;
+        }
+
+        input::placeholder {
+            font-style: italic;
+            font-size: larger;
+            text-align: center;
+        }
+
+        .dlist li::marker {
+            color: red;
+            font-style: italic;
+        }
+
+        .filein::file-selector-button{
+            background-color: red;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="hitext">Hi</p>
+
+    <p class="datap">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, dolorum. Repudiandae consequuntur
+        fugiat eum
+        quam inventore, unde itaque assumenda doloremque totam cupiditate dolorem culpa praesentium beatae numquam
+        molestiae voluptatibus libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur minus
+        voluptatem molestiae earum soluta!
+        Itaque nisi culpa illum! Tempore, repudiandae cum. Tempore numquam recusandae reprehenderit reiciendis itaque
+        nihil quidem alias.</p>
+
+    <input type="text" placeholder="Enter Name" name="" id="">
+
+    <ol class="dlist">
+        <li>Ashish</li>
+        <li>Sam</li>
+        <li>Pawan</li>
+    </ol>
+
+    <input type="file" class="filein" name="" id="">
+
+
+</body>
+
+</html>
