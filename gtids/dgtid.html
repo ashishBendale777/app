@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "sidebar main aside"
+                "footer footer footer";
+            grid-template-rows: 60px 1fr 100px;
+            grid-template-columns: auto 1fr auto;
+            gap: 10px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: red;
+            text-align: center;
+        }
+
+        sidebar {
+            grid-area: sidebar;
+            background-color: red;
+        }
+
+        main {
+            grid-area: main;
+            background-color: blue;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: green;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>HEADER</header>
+    <sidebar>SIDEBAR</sidebar>
+    <main>MAIN</main>
+    <aside>ASIDE</aside>
+    <footer>
+        FOOTER
+    </footer>
+</body>
+
+</html>
