@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<hea>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .card-container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            background-color: red;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .card-items:nth-child(even) {
+            animation: slide-in 4s;
+        }
+
+        .card-items:nth-child(odd) {
+            animation: fade 4s;
+        }
+
+        .card-items {
+            padding: 10px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 400px;
+            background-color: blue;
+            flex-grow: 1;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px black;
+            /* animation: slide-in 4s; */
+        }
+
+        .card-items img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            box-shadow: 10px 10px 6px black;
+
+        }
+
+        .card-items h1 {
+            margin-top: 10px;
+        }
+
+        .card-items .card-info {
+            width: 100%;
+        }
+
+        .card-info p {
+            font-size: large;
+            text-shadow: 2px 2px 2px red;
+            margin-bottom: 10px;
+        }
+
+        @keyframes slide-in {
+            0% {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</hea>
+
+<body>
+    <div class="card-container">
+        <div class="card-items">
+            <img src="../cont.jpg" alt="">
+            <h1>Ashish Bendale</h1>
+            <div class="card-info">
+                <p>Salary:20000</p>
+                <p>Role:QA</p>
+                <p>Department:Web</p>
+            </div>
+        </div>
+        <div class="card-items">
+            <img src="../cont.jpg" alt="">
+            <h1>Jayshree</h1>
+            <div class="card-info">
+                <p>Salary:5000</p>
+                <p>Role:QA</p>
+                <p>Department:Web</p>
+            </div>
+        </div>
+        <div class="card-items">
+            <img src="../cont.jpg" alt="">
+            <h1>Priyanka</h1>
+            <div class="card-info">
+                <p>Salary:10000</p>
+                <p>Role:SE</p>
+                <p>Department:Web</p>
+            </div>
+
+        </div>
+        <div class="card-items">
+            <img src="../cont.jpg" alt="">
+            <h1>Aniket</h1>
+            <div class="card-info">
+                <p>Salary:50000</p>
+                <p>Role:HR</p>
+                <p>Department:Web</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
