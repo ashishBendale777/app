@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var friendsName = []
+
+        //push
+        friendsName.push("Sam")
+        friendsName.push("Amol")
+        friendsName.pop()
+        friendsName.push("Pawan")
+        friendsName.push("Dhiraj")
+
+        console.log(friendsName)
+        friendsName.shift()
+        friendsName.unshift("Bhushan")
+        friendsName.unshift("Sarvesh")
+
+        console.log(friendsName)
+
+        var newFriends = friendsName.concat(["Bhavana", "Varsha"])
+        console.log(newFriends)
+        console.log(friendsName)
+        friendsName.push("Tej")
+        friendsName.push("Aniket")
+        friendsName.push("Keshav")
+
+        var newSlice = friendsName.slice(4, 6)
+        console.log(friendsName)
+        console.log("After Slice", newSlice)
+
+
+        var result = friendsName.some((name) => name == "Ashish")
+        console.log(result)
+
+
+        var evrresult = friendsName.every((name) => name != "Tej")
+        console.log(evrresult)
+
+    </script>
+</body>
+
+</html>
