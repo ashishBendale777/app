@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //JS Object
+        var student = {
+            stdName: "Ashish",
+            stdRollNo: 1,
+            stdCourse: "MCA",
+            stdMarks: 54
+        }
+
+        console.log("Marks", student.stdMarks)
+        console.log("Course", student.stdCourse)
+
+        student.stdRollNo = 3
+        console.log(student.stdRollNo)
+
+        //Array Of object
+        var studData = [
+            {
+                stdName: "Ashish",
+                stdRollNo: 1,
+                stdCourse: "MCA",
+                stdMarks: 54
+            },
+            {
+                stdName: "Pawan",
+                stdRollNo: 2,
+                stdCourse: "MCA",
+                stdMarks: 54
+            },
+            {
+                stdName: "Sam",
+                stdRollNo: 3,
+                stdCourse: "MCA",
+                stdMarks: 54
+            }
+        ]
+        console.table(studData)
+
+        // let std = studData[2]
+        // console.log(std.stdName)
+
+        //FOR OF
+        // for (var stud of studData) {
+        //     console.log(stud.stdName)
+        //     console.log(stud.stdMarks)
+        // }
+
+        //FOR IB
+        // for (let index in studData) {
+        //     console.log(studData[index].stdName)
+        // }
+
+        // for (var key in student) {
+        //     // console.log(key)
+        //     console.log(student[key])
+        // }
+    </script>
+</body>
+
+</html>
