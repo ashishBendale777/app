@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        var studData = [
+            {
+                stdName: "Ashish",
+                stdRollNo: 1,
+                stdCourse: "MCA",
+                stdMarks: 54
+            },
+            {
+                stdName: "Pawan",
+                stdRollNo: 2,
+                stdCourse: "BCA",
+                stdMarks: 54
+            },
+            {
+                stdName: "Sam",
+                stdRollNo: 3,
+                stdCourse: "MCA",
+                stdMarks: 54
+            }
+        ]
+
+
+        console.table(studData)
+
+        var stud = studData.find((std) => std.stdRollNo == 54)
+        console.log(stud)
+
+        var mcaStuds = studData.filter((stud) => stud.stdCourse == "BCA")
+        console.table(mcaStuds)
+        console.table(mcaStuds.length)
+
+        var isStudExist = studData.some((std) => std.stdCourse == "MCA")
+        console.log(isStudExist)
+
+        var haveMcaCourse = studData.every((std) => std.stdCourse == "MCA")
+        console.log(haveMcaCourse)
+
+
+        studData.push({
+                stdName: "Tej",
+                stdRollNo: 4,
+                stdCourse: "MCA",
+                stdMarks: 54
+            })
+            console.table(studData)
+    </script>
+</body>
+
+</html>
