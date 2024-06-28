@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var ashuAcc = {
+            accId: 1,
+            accNam: "Ashush",
+            accBalance: 1232
+        }
+
+        var samAcc = {
+            accId: 2,
+            accNam: "Sam",
+            accBalance: 3214
+        }
+
+        // withdrawal
+        console.log(ashuAcc.accBalance)
+        ashuAcc.accBalance -= 21
+        console.log(ashuAcc.accBalance)
+
+        // deposit
+
+        console.log(ashuAcc.accBalance)
+        ashuAcc.accBalance += 21
+        console.log(ashuAcc.accBalance)
+
+
+        //creating fuction
+        function withdraAmount(amount) {
+            samAcc.accBalance -= amount
+            console.log("Aftern withdraw", samAcc.accBalance)
+        }
+
+
+
+        //function calling
+        // withdraAmount(11)
+        // withdraAmount(10)
+        // withdraAmount(132)
+
+        function transfferAmmount(amt) {
+            samAcc.accBalance -= amt
+            ashuAcc.accBalance += amt
+
+            console.log(ashuAcc.accBalance)
+            console.log(samAcc.accBalance)
+        }
+
+        transfferAmmount(30)
+    </script>
+</body>
+
+</html>
