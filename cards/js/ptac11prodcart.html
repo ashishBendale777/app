@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <<title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var prodList = [{
+            prodId: 1,
+            prodName: "lap",
+            prodPrice: 2312
+        },
+        {
+            prodId: 2,
+            prodName: "mob",
+            prodPrice: 4321
+        }, {
+            prodId: 3,
+            prodName: "glass",
+            prodPrice: 432
+        }]
+
+        var cartItems = []
+
+        function addCart(pId) {
+            var prod = prodList.find((p) => p.prodId == pId)
+            cartItems.push(prod)
+            console.table(cartItems)
+        }
+
+        function calotal() {
+            // let total = 0
+            // for (const prod of cartItems) {
+            //     total += prod.prodPrice
+            // }
+            // console.log("Total", total)/
+
+            const productFindPrice = cartItems.map((item, index) => item.prodPrice);
+            const productPrice = productFindPrice.reduce((a, c) => a + c, 0)
+            console.log("Final Price", productPrice)
+        }
+
+        function cleartCart() {
+            cartItems = []
+        }
+
+        addCart(2)
+        addCart(1)
+
+        calotal()
+
+    </script>
+</body>
+
+</html>
