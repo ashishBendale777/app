@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // console.log(add(32, 12))
+
+        // console.log(mult(2, 32))
+
+
+        function add(a, b) {
+            return a + b
+        }
+
+        // //fun call
+        // var ans = add(32, 12)
+        // var mult = (x, y) => x * y
+
+        // setTimeout(() => {
+        //     console.log("Addd", add(12, 32))
+        // }, 5000)
+
+        // //without callback
+        // function step1() {
+        //     setTimeout(() => {
+        //         console.log("step 1 complete")
+        //     }, 2000)
+        // }
+        // function step2() {
+        //     setTimeout(() => {
+        //         console.log("step 2 complete")
+        //     }, 2000)
+        // }
+        // function step3() {
+        //     setTimeout(() => {
+        //         console.log("step 3 complete")
+        //     }, 2000)
+        // }
+
+
+        // //calling
+        // step1()
+        // step2()
+        // step3()
+
+
+        //with callback
+        function step1(goToNext) {
+            setTimeout(() => {
+                console.log("step 1 complete")
+                goToNext()
+            }, 2000)
+        }
+        function step2(goToNext) {
+            setTimeout(() => {
+                console.log("step 2 complete")
+                goToNext()
+            }, 2000)
+        }
+        function step3() {
+            setTimeout(() => {
+                console.log("step 3 complete")
+            }, 2000)
+        }
+
+
+        //calling
+        step1(() => {
+            step2(() => {
+                step3()
+            })
+        })
+
+        
+
+
+
+
+    </script>
+</body>
+
+</html>

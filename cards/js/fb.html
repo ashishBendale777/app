@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // for (let index = 1; index <= 50; index++) {
+        //     if (index % 3 == 0 && index % 5 == 0) {
+        //         console.log("FIZZ BUZZ")
+        //     } else if (index % 3 == 0) {
+        //         console.log("FIZZ")
+        //     } else if (index % 5 == 0) {
+        //         console.log("BUZZ")
+        //     } else {
+        //         console.log(index)
+        //     }
+        // }
+
+        for (let index = 1; index <= 50; index++) {
+            const output = (index % 3 === 0 && index % 5 === 0) ? "FIZZ BUZZ" :  (index % 3 === 0) ? "FIZZ" :  (index % 5 === 0) ? "BUZZ" : index;
+            console.log(output);
+        }
+    </script>
+</body>
+
+</html>
