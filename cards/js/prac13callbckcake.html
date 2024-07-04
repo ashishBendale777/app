@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //cake making
+
+        function chooseInged(ingredi, goNext) {
+            let cake = {}
+
+            cake.ingediants = ingredi
+            setTimeout(() => {
+                console.log("Ingedianrs slected..")
+                goNext(cake)
+            }, 2000)
+        }
+
+        function betterPreperation(cake, shape, goNext) {
+            cake.shape = shape
+            setTimeout(() => {
+                console.log("preparation done")
+                goNext(cake)
+            }, 2000)
+        }
+
+        function bakingProcess(cake, goNext) {
+            cake.isBacked = true
+            setTimeout(() => {
+                console.log("backing done")
+                goNext(cake)
+            }, 2000)
+        }
+
+        function decorateCake(cake, goNext) {
+            cake.isDecorated = true
+            setTimeout(() => {
+                console.log("decoration done")
+                goNext(cake)
+            }, 2000)
+        }
+
+        var ingr = ["floor", "cherry", "vanila ecence", "sugar"]
+        chooseInged(ingr, (cake) => {
+            console.log(cake)
+            betterPreperation(cake, "heart", (cake) => {
+                bakingProcess(cake, (cake) => {
+
+                    decorateCake(cake, (cake) => {
+                        console.log(cake)
+                        console.log("Cake is ready to cut")
+                    })
+                })
+            })
+        })        
+    </script>
+</body>
+
+</html>
