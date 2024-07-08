@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //define promise
+
+
+
+        // var myProm = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Hi....!")
+        //     }, 3000)
+        // })
+
+        function getMessage(personName) {
+
+            var myProm = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (personName != "") {
+                        resolve("Hiii...." + personName)
+                    } else {
+                        reject(new Error("Imvalid Name"))
+                    }
+                }, 3000)
+            })
+
+            return myProm
+        }
+
+
+        // myProm
+        //     .then((rsult) => {
+        //         console.log(rsult)
+        //     })
+        //     .catch(() => { })
+
+
+        getMessage("Ashish")
+            .then((result) => {
+                console.log(result)
+            }).catch((error) => { console.log(error) })
+            .finally(() => {
+                console.log("rask Complete")
+            })
+    </script>
+</body>
+
+</html>
