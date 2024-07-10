@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //cake making
+
+        function chooseInged(ingredi) {
+            let cake = {}
+
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (ingredi == null) {
+                        reject(new Error("Please Add Ingedi.."))
+                    } else {
+                        console.log("Ingedianrs slected..")
+                        cake.ingediants = ingredi
+                        resolve(cake)
+                    }
+                }, 2000)
+            })
+        }
+
+        function betterPreperation(cake, shape) {
+
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (shape != "") {
+                        console.log("preparation done")
+                        cake.shape = shape
+                        resolve(cake)
+                    } else {
+                        reject(new Error("Please Select shape"))
+                    }
+                }, 2000)
+            })
+        }
+
+        function bakingProcess(cake, goNext) {
+            cake.isBacked = true
+            setTimeout(() => {
+                console.log("backing done")
+                goNext(cake)
+            }, 2000)
+        }
+
+        function decorateCake(cake, goNext) {
+            cake.isDecorated = true
+            setTimeout(() => {
+                console.log("decoration done")
+                goNext(cake)
+            }, 2000)
+        }
+
+        var ingr = ["floor", "cherry", "vanila ecence", "sugar"]
+
+        async function startCakeMaking() {
+
+            try {
+                var resuCake1 = await chooseInged(ingr)
+                console.log(resuCake1)
+
+                var resCake2 = await betterPreperation(resuCake1, "Star")
+                console.log(resCake2)
+            } catch (err) {
+                console.log(err)
+            }
+
+
+
+        }
+
+        startCakeMaking()
+    </script>
+</body>
+
+</html>
