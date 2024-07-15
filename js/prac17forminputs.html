@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+    <input id="input1" type="number" placeholder="Enter No" />
+    <input id="input2" type="number" placeholder="Enter 2 No" />
+    <button onclick={doAdd()} id="btnAdd">ADD</button>
+    <h3 id="ans">Answer</h3>
+    <script>
+        var inputA = document.getElementById("input1")
+        var inputB = document.getElementById("input2")
+
+        var btnAdd = document.getElementById("btnAdd")
+        var ans = document.getElementById("ans")
+
+
+        function doAdd() {
+            var a = Number(inputA.value)
+            var b = Number(inputB.value)
+
+            ans.innerText = "Answer:" + (a + b)
+
+        }
+
+
+    </script>
+</body>
+
+</html>
