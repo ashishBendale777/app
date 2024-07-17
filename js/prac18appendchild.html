@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div>
+        <input type="text" id="friendName" placeholder="Enter Name">
+        <button id="btnAdd">Add</button>
+    </div>
+    <div>
+        <ul id="friendsList">
+
+        </ul>
+    </div>
+
+    <script>
+        var inName = document.getElementById("friendName")
+        var btnAdd = document.getElementById("btnAdd")
+        var friendsList = document.getElementById("friendsList")
+
+        let frinedsNames = []
+
+        function showData() {
+            friendsList.innerHTML = null
+            for (const name of frinedsNames) {
+                let liName = document.createElement("li")
+                liName.innerText = name
+                friendsList.appendChild(liName)
+            }
+        }
+
+        function addFriend() {
+            let frdName = inName.value
+            frinedsNames.push(frdName)
+            console.log(frinedsNames)
+            showData()
+        }
+
+
+
+        btnAdd.addEventListener("click", () => {
+            addFriend()
+        })
+    </script>
+</body>
+
+</html>
