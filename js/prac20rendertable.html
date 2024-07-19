@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="stdName" placeholder="Enter Name">
+        <input type="text" id="stdMarks" placeholder="Enter Marks">
+        <input type="text" id="stdCourse" placeholder="Enter Course">
+        <button id="btnAdd">Add</button>
+    </div>
+    <div>
+        <table id="tblStud">
+            <tr>
+                <th>NAME</th>
+                <th>MARKS</th>
+                <th>COURSE</th>
+            </tr>
+
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        var sName = document.getElementById("stdName")
+        var sMarks = document.getElementById("stdMarks")
+        var sCourse = document.getElementById("stdCourse")
+
+        var btnAdd = document.getElementById("btnAdd")
+        var tblStud = document.getElementById("tblStud")
+        var tbody = document.getElementById("tbody")
+
+        let studentsData = []
+
+        function showData() {
+            tbody.innerHTML = null
+            for (const std of studentsData) {
+                let tr = document.createElement("tr")
+                let tdName = document.createElement("td")
+                let tdMarks = document.createElement("td")
+                let tdCourse = document.createElement("td")
+
+                tdName.innerText = std.stdName
+                tdMarks.innerText = std.stdMarks
+                tdCourse.innerText = std.stdCourse
+
+                tr.appendChild(tdName)
+                tr.appendChild(tdMarks)
+                tr.appendChild(tdCourse)
+
+                tbody.appendChild(tr)
+            }
+        }
+
+        function addFriend() {
+            let stdName = sName.value
+            let stdMarks = sMarks.value
+            let stdCourse = sCourse.value
+
+            let stud = { stdName, stdCourse, stdMarks }
+            // let stud = {
+            //     Name: stdName,
+            //     Course: stdCourse,
+            //     Marks: stdMarks
+            // }
+            studentsData.push(stud)
+            console.log(studentsData)
+            showData()
+        }
+
+
+
+        btnAdd.addEventListener("click", () => {
+            addFriend()
+        })
+    </script>
+</body>
+
+</html>

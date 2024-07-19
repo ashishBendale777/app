@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="stdName" placeholder="Enter Name">
+        <input type="text" id="stdMarks" placeholder="Enter Marks">
+        <input type="text" id="stdCourse" placeholder="Enter Course">
+        <button id="btnAdd">Add</button>
+    </div>
+    <ul id="stdList"></ul>
+    
+    <script>
+        var sName = document.getElementById("stdName")
+        var sMarks = document.getElementById("stdMarks")
+        var sCourse = document.getElementById("stdCourse")
+
+        var btnAdd = document.getElementById("btnAdd")
+        var studsList = document.getElementById("stdList")
+
+        let studentsData = []
+
+        function showData() {
+            studsList.innerHTML = null
+            for (const std of studentsData) {
+                let liName = document.createElement("li")
+                liName.innerText = std.stdName + std.stdCourse + std.stdMarks
+                studsList.appendChild(liName)
+            }
+        }
+
+        function addFriend() {
+            let stdName = sName.value
+            let stdMarks = sMarks.value
+            let stdCourse = sCourse.value
+
+            let stud = { stdName, stdCourse, stdMarks }
+            studentsData.push(stud)
+            console.log(studentsData)
+            showData()
+        }
+
+
+
+        btnAdd.addEventListener("click", () => {
+            addFriend()
+        })
+    </script>
+</body>
+
+</html>
