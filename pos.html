@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-con {
+            height: 100vh;
+            width: 100%;
+            background-color: red;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .container-item {
+            height: 300px;
+            flex-grow: 1;
+            background-color: green;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            background-color: black;
+            padding: 10px;
+            transition: opacity 1s;
+            /* transition: all 1s; */
+            opacity: 0;
+        }
+
+        .container-item:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-con">
+        <div class="container-item">
+            <div class="overlay">
+                <h1>HI</h1>
+            </div>
+        </div>
+        <div class="container-item">
+            <div class="overlay">
+                <h1>Hello</h1>
+            </div>
+
+        </div>
+        <div class="container-item">
+            <div class="overlay">
+                <h3>Ashish</h3>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
